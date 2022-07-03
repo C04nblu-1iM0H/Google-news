@@ -1,0 +1,239 @@
+@import "variables";
+
+@mixin font ($fontSize,$fontFamily...) {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+}
+
+@mixin icon{
+    fill: #5f6368;
+    color:#5f6368;
+}
+
+@mixin button($border,$backgroundButton){
+    border:$border;
+    background: $backgroundButton;
+}
+
+@mixin burger($margin,$borderRadius,$padding){
+    margin: $margin;
+    border-radius: $borderRadius;
+    padding: $padding;
+    cursor: pointer;
+}
+
+@mixin inpSearch($padding,$BorderColor,$background,$borderStyle,$borderWidth,$outline){
+    padding: $padding;
+    border-color: $BorderColor;
+    background: $background;
+    border-style: $borderStyle;
+    border-width: $borderWidth;
+    outline: $outline;
+}
+
+@mixin menuLeft{
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 20%), 0 0 0 0 rgb(0 0 0 / 14%), 0 0 0 0 rgb(0 0 0 / 12%);
+    inline-size: var(--mdc-width,var(--mdc-drawer-container-width,275px));
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+    transition: inline-size .25s cubic-bezier(0.4,0,0.2,1) 0s,
+    visibility 0s cubic-bezier(0.4,0,0.2,1) .25s;
+}
+
+@mixin link($textDecoration,$color){
+    text-decoration: $textDecoration;
+    color:$color;
+}
+
+
+@mixin menuUl($listStyle,$padding){
+    list-style-type: $listStyle;
+    padding: $padding;
+}
+
+
+@mixin lineMargin{
+    border-bottom: 1px solid #dadce0;
+    width: 14.5rem;
+    margin: 0.75rem 0;
+    margin-left: 1rem;
+}
+
+@mixin IconMenu{
+    font-size:1.3rem;
+    margin-right: 1rem;
+    color: #5f6368;
+}
+
+@mixin linkIconMenu{
+    margin: 0 0.5rem;
+    color: #5f6368;
+    width: 16px;
+    height: 16px;
+}
+
+@mixin iconSvg{
+    height: 24px;
+    width: 24px;
+    margin-right: 1rem;
+    fill: #5f6368;
+}
+
+@mixin figureBlock{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+@mixin figureImgBlock{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin resizeMP{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin arrowTooltip{
+    top:0;
+    left:50%;
+    margin-left:-5px;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-bottom:5px solid rgba(0, 0, 0, 0.6);
+}
+
+@mixin articleNews($position,$color,$verticalAlign, $padding){
+    position: $position;
+    color:$color;
+    vertical-align: $verticalAlign;
+    padding: $padding;
+}
+
+@mixin sub_news_btn{
+    position: absolute;
+    top: 30px;
+    right: auto;
+    bottom: auto;
+    left: 22px;
+    z-index: 1;
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background: #1a73e8;
+}
+
+@mixin article_link{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    cursor: pointer;
+}
+
+@mixin article_link_items {
+    display: $displayBlock;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 500;
+    color: inherit;
+    word-break: $break-word ;
+    word-wrap: $break-word;
+    text-decoration:none;
+}
+
+@mixin  information_tips($display,$position,$white-space,$textAlign) {
+    display: $display;
+    position: relative;
+    z-index: 6;
+    white-space: $white-space;
+    text-align: $textAlign;
+}
+
+@mixin btnNews($background,$fontSize,$marginRight,$padding,$borderRadius,$transition) {
+    display: $displayInlineBlock;
+    background:$background;
+    font-size: $fontSize;
+    margin-right: $marginRight;
+    padding:$padding;
+    border-radius: $borderRadius;
+    border:none;
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    transition: $transition;
+    opacity: 0;
+}
+
+@mixin btn_icon{
+    transform: translate(-50%,-50%) scale(0);
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@mixin  btnHover($boxShadow,$transition) {
+    -moz-box-shadow: $boxShadow;
+    -webkit-box-shadow: $boxShadow;
+    box-shadow: $boxShadow; 
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    transition: $transition;
+}
+
+@mixin weather_aside{
+    position: absolute;
+    max-width:350px;
+    top: 84px;
+    left: 65%;
+    right: 0;
+    bottom: 0;
+}
+
+@mixin weather_sub_title( $color, $padding, $margin, $borderBottom){
+    color: $color;
+    padding:$padding;
+    margin: $margin;
+    border-bottom: $borderBottom;
+}
+
+@mixin h4($fontWeight,$color,$marginBottom){
+    font-weight: $fontWeight;
+    color:$color;
+    margin-bottom: $marginBottom;
+}
+
+@mixin weatherBlockTitle($boxOrient, $boxAlign, $height, $padding){
+    -webkit-box-orient: $boxOrient;
+    box-orient: $boxOrient;
+    -webkit-box-align: $boxAlign;
+    box-align: $boxAlign;
+    height: $height;
+    padding: $padding;
+}
+
+@mixin fontWeatherCondition($color, $fontWeight, $lineHeight){
+    color: $color;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+}

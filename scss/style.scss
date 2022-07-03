@@ -1,0 +1,670 @@
+@font-face {
+    font-family: "NotoSans"; 
+    src: url("/fonts/NotoSans-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "Google"; 
+    src: url("/fonts/ProductSans-Medium.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "GoogleLight"; 
+    src: url("/fonts/ProductSans-Light.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@import "variables";
+@import "functionMixin";
+
+
+.box_navbar{
+    -webkit-box-shadow: 0px 7px 8px -1px rgba(34, 60, 80, 0.4);
+    -moz-box-shadow: 0px 7px 8px -1px rgba(34, 60, 80, 0.4);
+    box-shadow: 0px 7px 8px -1px rgba(34, 60, 80, 0.4);
+}
+
+
+.LogoBurgerMenu{
+    .burger{
+        @include burger(0 4px,50%,12px);
+        .burger_svg{
+            width: 24px;
+            height: 24px;
+            @include icon;
+        }
+    }
+    .burger:hover{
+        background:#d9dcdf;
+    }
+}
+
+.LogoBurgerMenu{
+    min-width: 226.52px;
+    .logo_Block{
+        .logo_Link{
+            text-decoration: none;
+            color:#5f6368;
+            @include font(22px,"NotoSans", Arial,sans-serif);
+            :first-child:before{
+                content:url("https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg");
+                display: inline-block;
+                height: 24px;
+                width: 74px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.search_box{
+    .search_element{
+        background: $backgroundButton;
+        border: 1px solid transparent;
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+        margin-left: $auto;
+        margin-right: $auto;
+        position: relative;
+        -webkit-transition: $backgroundButton 100ms ease-in,width 100ms ease-out;
+        transition: $backgroundButton 100ms ease-in,width 100ms ease-out;
+    }
+}
+
+.search_box{
+    .SearchElementStyle{
+        border-radius: 8px;
+        box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.17);
+        -webkit-box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.17);
+        -moz-box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.17);
+        box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.17);
+    }
+    .search_form{
+        height: 50px;
+        button{
+            @include button(none,$backgroundButton);
+            @include icon;
+        }
+        .inpSearch{
+            @include inpSearch(0 16px,transparent,transparent,solid,0 1px,none);
+        }
+        .inpSearch::placeholder{
+            opacity: 0.5;
+        }
+        .btnDel{
+            display:none;
+        }
+        .show{
+            display:block;
+        }
+        .changeOfStyle{
+            background:white;
+        }
+    }
+}
+
+.lk_box{
+    .lk-item{
+        div{
+            @include burger(0 0,50%,7px 12px);
+            .bi{
+                font-size: 1.3rem;
+                @include icon;
+            }
+        }
+        :hover{
+            background:#d9dcdf;
+        }
+    }
+}
+
+.main{
+    .sub_main{
+        .menu_left{
+            @include menuLeft;
+            inline-size: 1;// добавляем свойство по клику на бургер
+        }
+        .active{
+            inline-size: 0;
+        }
+        .box_left{
+            min-inline-size: var(--mdc-width,var(--mdc-drawer-container-width,275px));
+            position: relative;
+            transition: min-inline-size .25s cubic-bezier(0.4,0,0.2,1) 0s;
+        }
+        .menu{
+            height: calc(100vh - 24px);
+            width: min-content;
+            position: inherit;
+        }
+
+        .scrollbox {
+            overflow: auto;
+            visibility: hidden;
+          }
+        .scrollbox-content,
+        .scrollbox:hover,
+        .scrollbox:focus {
+            visibility: visible;
+        }
+        
+        .scrollbox::-webkit-scrollbar{
+            background: transparent;
+            height: 16px;
+        }
+        .scrollbox::-webkit-scrollbar-button{
+            background: transparent;
+        }
+        .scrollbox::-webkit-scrollbar-corner{
+            background: transparent;
+        }
+        .scrollbox::-webkit-scrollbar-thumb{
+            background: rgba(128,134,139,0.2);
+            background-clip: padding-box;
+            border: 4px solid transparent;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        
+    }
+}
+
+.main{
+    .sub_main{
+        .menu_left{
+            .lineMargin{
+                @include lineMargin;
+            }
+            .basic_menu{
+                margin-top: 20px;
+                @include menuUl(none,0);
+                a{
+                    @include link(none,#3c4043);
+                    width: 15rem;
+                    height: 42px;
+                    cursor: pointer;
+                    padding-left: 1.5rem;
+                    .bi{
+                        @include IconMenu;
+                    }
+                    span{
+                        @include font(0.875rem,"Google", Arial,sans-serif);
+                        font-weight: 500;
+                        line-height: 1.4;
+                    }
+                }
+                a:hover{
+                    .bi{
+                        color:$colorIconAndElemMenu;
+                    }
+                    span{
+                        color:$colorIconAndElemMenu;
+                    }
+                }
+                a:first-child{
+                    color:$colorIconAndElemMenu;
+                    background:#e3edfd;
+                    -moz-border-radius-topleft: 5px;
+                    -webkit-border-top-left-radius: 5px;
+                    border-top-left-radius: 5px;
+                    -moz-border-radius-topright: 80px;
+                    -webkit-border-top-right-radius: 80px;
+                    border-top-right-radius: 80px;
+                    -moz-border-radius-bottomright: 80px;
+                    -webkit-border-bottom-right-radius: 80px;
+                    border-bottom-right-radius: 80px;
+                    -moz-border-radius-bottomleft: 5px;
+                    -webkit-border-bottom-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                    .bi{
+                        color:$colorIconAndElemMenu;
+                    }
+                }
+            }
+            .Covid_menu{
+                @include menuUl(none,0);
+                a{
+                    @include link(none,#3c4043);
+                    width: 15rem;
+                    height: 42px;
+                    cursor: pointer;
+                    padding-left: 1.5rem;
+                    .bi{
+                        @include IconMenu;
+                    }
+                    span{
+                        @include font(0.875rem,"Google", Arial,sans-serif);
+                        font-weight: 500;
+                    }
+                }
+                a:hover{
+                    .bi{
+                        color:$colorIconAndElemMenu;
+                    }
+                    span{
+                        color:$colorIconAndElemMenu;
+                    }
+                }
+            }
+            .secondary_menu{
+                @include menuUl(none,0);
+                a{
+                    @include link(none,#3c4043);
+                    width: 15rem;
+                    height: 42px;
+                    cursor: pointer;
+                    padding-left: 1.5rem;
+                    .bi{
+                        @include IconMenu;
+                    }
+                    .iconSvg{
+                        @include iconSvg;
+                    }
+                    span{
+                        @include font(0.875rem,"Google", Arial,sans-serif);
+                        font-weight: 500;
+                        
+                    }
+                }
+                a:hover{
+                    .bi{
+                        color:$colorIconAndElemMenu;
+                    }
+                    .iconSvg{
+                        fill:$colorIconAndElemMenu;
+                    }
+                    span{
+                        color:$colorIconAndElemMenu;
+                    }
+                }
+            }
+            .setings_menu{
+                @include menuUl(none,0);
+                a{
+                    @include link(none,#3c4043);
+                    width: 15rem;
+                    height: 42px;
+                    cursor: pointer;
+                    padding-left: 1.5rem;
+                    span{
+                        @include font(0.875rem,"Google", Arial,sans-serif);
+                        font-weight: 500;
+                    }
+                    .bi{
+                       @include linkIconMenu;
+                    }
+                }
+                a:first-child{
+                    .small{
+                        @include font(0.75rem,"Google", Arial,sans-serif);
+                        font-weight: 700;
+                        color: black;
+                    }
+                }
+                a:hover{
+                    .bi{
+                        color:$colorIconAndElemMenu;
+                    }
+                    span{
+                        color:$colorIconAndElemMenu;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main{
+    .sub_main{
+        .conent_block{
+            position: absolute;
+            max-width:$contentBlock;
+            margin: auto;
+            top: 80px;
+            left: 5.5%;
+            right: 0;
+            bottom: 0;
+            .news_block{
+                max-width: 730.66px;
+                height: 150px;
+                .heading{
+                    margin-top: 2.5rem;
+                    margin-bottom: 20px;
+                    h2{
+                        @include font(1.3rem,"Google", Arial,sans-serif);
+                        margin: 0;
+                    }
+                    a{
+                        @include link(none,#1a89ee);
+                        @include font(1rem,"GoogleLight", Arial,sans-serif);
+                        font-weight: 500;
+                    }
+                }
+                .Corona{
+                    background: #ffffff;
+                    border: 1px solid #dadce0;
+                    border-radius: 8px;
+                    padding: 1rem;
+                    cursor: pointer;
+                    -webkit-transition: all 0.9s ease;
+                    -moz-transition: all 0.9s ease;
+                    transition: all 0.9s ease;
+                }
+                .Corona:hover{
+                    -moz-box-shadow: 0 0 10px #bebebe;
+                    -webkit-box-shadow: 0 0 10px #bebebe;
+                    box-shadow:0 0 10px #bebebe; 
+                    -webkit-transition: all 0.9s ease;
+                    -moz-transition: all 0.9s ease;
+                    transition: all 0.9s ease;
+                }
+            }
+        }
+    }
+}
+
+.main{
+    .sub_main{
+        .conent_block{
+            .news_block{
+                .news_elementBlock{
+                    -webkit-box-orient: vertical;
+                    box-orient: vertical;
+                    border: 1px solid #dadce0;
+                    border-radius: 8px;
+                    position: relative;
+                    overflow-anchor: none;
+                    margin-top: 20px;
+                    padding-bottom: 20px;
+                    a{
+                        text-decoration:none;
+                        figure{
+                            @include figureBlock;
+                            img{
+                                @include figureImgBlock;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main{
+    .sub_main{
+        .conent_block{
+            .news_block{
+                .news_elementBlock{
+                    .News_article{
+                        @include articleNews(relative,#202124,top,16px 132px 0 16px);
+                        .article_link{
+                            @include article_link;
+                        }
+                        h3{
+                            margin-bottom: 0;
+                            font-size: 1.125rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.news_elementBlock{
+    .News_article .sub_news{
+        h3{
+            .article_link_items{
+                @include  article_link_items;
+            }
+        }
+    }
+    .News_article:hover {
+        h3{
+            .article_link_items{
+                text-decoration: underline;
+            }
+        }
+        .info_block{
+            .information_tips{
+                .btn{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.news_elementBlock{
+    .News_article {
+        .info_time{
+            .links{
+                @include font(0.75rem,"GoogleLight", Arial,sans-serif);
+                color: inherit;
+                display: $displayInlineBlock;
+                margin-right: $margin-right-LinksAndTime;
+                opacity: .7;
+            }
+            time{
+                @include font(0.75rem,"GoogleLight", Arial,sans-serif);
+                color: inherit;
+                display: $displayInlineBlock;
+                margin-right: $margin-right-LinksAndTime;
+                opacity: .7;
+            }
+        }
+    }
+}
+
+.news_elementBlock{
+    .News_article{
+        .info_block{
+            menu{
+                @include resizeMP;
+            }
+            .information_tips{
+                @include information_tips($displayBlock,$positionRelative,nowrap,right);
+                .btn{
+                    @include btnNews( #ffffff,2px,0.25rem, 2px 4px ,1rem,opacity .15s ease-in-out);
+                    .btn_icon{
+                        @include btn_icon;
+                    }
+
+                    .bi{
+                        @include icon;
+                        font-size: 10px;
+                    }
+                }
+                .btn:hover{
+                    @include btnHover(0 0 10px #bebebe,all 0.9s ease);
+                }
+            }
+        }
+    }
+}
+
+
+.news_elementBlock{
+
+    .sub_news{
+        @include articleNews(relative,#202124,top,16px 132px 0 35px);
+        .article_link{
+            @include article_link;
+        }
+        h4{
+            margin-bottom: 0;
+            font-size: 0.875rem;
+            .article_link_items{
+             @include  article_link_items;
+            }
+        }
+    }
+    .sub_news:hover {
+        h4{
+            .article_link_items{
+                text-decoration: underline;
+            }
+        }
+        .info_block{
+            .information_tips{
+                .btn{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .sub_news {
+        .info_time{
+            .links{
+                @include font(0.75rem,"GoogleLight", Arial,sans-serif);
+                color: inherit;
+                display:$displayInlineBlock;
+                margin-right: $margin-right-LinksAndTime;
+                opacity: .7;
+            }
+            time{
+                @include font(0.75rem,"GoogleLight", Arial,sans-serif);
+                color: inherit;
+                display: inline-block;
+                margin-right: $margin-right-LinksAndTime;
+                opacity: .7;
+            }
+        }
+        .info_block{
+            menu{
+                @include resizeMP;
+            }
+            .information_tips{
+                @include information_tips($displayBlock,$positionRelative,nowrap,right);
+                .btn{
+                    @include btnNews( #ffffff,2px,0.25rem, 2px 4px ,1rem,opacity .15s ease-in-out);
+                    .btn_icon{
+                        @include btn_icon;
+                    }
+
+                    .bi{
+                        @include icon;
+                        font-size: 10px;
+                    }
+                }
+                .btn:hover{
+                    @include btnHover(0 0 10px #bebebe,all 0.9s ease);
+                }
+            }
+        }
+    }
+
+    .sub_news_btn::before{
+        @include sub_news_btn;
+    }
+    .accordion-items{
+        display: none;
+    }
+
+}
+
+.tooltip .tooltip-inner{
+    font-size:$tooltip-font-size;
+    opacity:$tooltip-opacity ;
+}
+
+.tooltip .tooltip-arrow::before{
+    @include arrowTooltip;
+} 
+
+
+.news_elementBlock{
+    .showAndHight{
+        .linkShow{
+            a{
+                span{
+                    @include font(0.85rem,"Google", Arial,sans-serif);
+                    font-weight:500;
+                }
+                span:hover{
+                    text-decoration:underline;
+                }
+            }
+        }
+        padding: 0 30px;
+        .toggleButton{
+            .show{
+                cursor: pointer;
+                font-size:1.2rem;
+                :hover{
+                    color: $colorIconAndElemMenu;
+                }   
+            }
+            .transform{
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.weather_aside{
+    @include weather_aside;
+}
+
+.weather_title{
+    .weather_sub_title{
+        @include weather_sub_title($colorGrey, 12.8px 0, 0 16px, 1px solid #dadce0);
+        h4{
+            @include font(1rem,"Google", Arial,sans-serif);
+            @include h4(500,inherit,0);
+        }
+    }
+}
+
+.weather_block_title{
+    @include weatherBlockTitle($boxOrient, $boxAlign,108px, 0.5rem 0.75rem 1rem 1rem);
+    .Weather_condition{
+        @include font(0.875rem,"Google", Arial,sans-serif);
+        @include fontWeatherCondition(#3c4043,500, 1.42);
+    }
+    .temperature{
+        @include font(1.75rem,"GoogleLight", Arial,sans-serif);
+        @include fontWeatherCondition(#3c4043,400, 1.42);
+    }
+    .celsius{
+        @include font(0.875rem,"Google", Arial,sans-serif);
+        @include fontWeatherCondition(#3c4043,500, 1.42);
+        margin-left: 2px;
+    }
+    .weather_condition_img{
+        width: 84px;
+        height: 84px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.weatherFive_block{
+    div{
+        overflow: hidden;
+        text-align: center;
+        span{
+            @include font(0.875rem,"Google", Arial,sans-serif);
+            @include fontWeatherCondition(#3c4043,500, 1.42);
+            display: block;
+            height: 1rem;
+        }
+        .weather_icon{
+            width: 52px;
+            max-width: 100%;
+            height: 52px;
+            margin: 0 auto;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+

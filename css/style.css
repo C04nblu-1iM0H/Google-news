@@ -1,0 +1,755 @@
+@font-face {
+  font-family: "NotoSans";
+  src: url("/fonts/NotoSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Google";
+  src: url("/fonts/ProductSans-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GoogleLight";
+  src: url("/fonts/ProductSans-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.box_navbar {
+  -webkit-box-shadow: 0px 7px 8px -1px rgba(34, 60, 80, 0.4);
+  box-shadow: 0px 7px 8px -1px rgba(34, 60, 80, 0.4);
+}
+
+.LogoBurgerMenu .burger {
+  margin: 0 4px;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+}
+.LogoBurgerMenu .burger .burger_svg {
+  width: 24px;
+  height: 24px;
+  fill: #5f6368;
+  color: #5f6368;
+}
+.LogoBurgerMenu .burger:hover {
+  background: #d9dcdf;
+}
+
+.LogoBurgerMenu {
+  min-width: 226.52px;
+}
+.LogoBurgerMenu .logo_Block .logo_Link {
+  text-decoration: none;
+  color: #5f6368;
+  font-family: "NotoSans", Arial, sans-serif;
+  font-size: 22px;
+}
+.LogoBurgerMenu .logo_Block .logo_Link :first-child:before {
+  content: url("https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg");
+  display: inline-block;
+  height: 24px;
+  width: 74px;
+  vertical-align: middle;
+}
+
+.search_box .search_element {
+  background: #f1f3f4;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  -webkit-transition: #f1f3f4 100ms ease-in, width 100ms ease-out;
+  transition: #f1f3f4 100ms ease-in, width 100ms ease-out;
+}
+
+.search_box .SearchElementStyle {
+  border-radius: 8px;
+  box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.17);
+}
+.search_box .search_form {
+  height: 50px;
+}
+.search_box .search_form button {
+  border: none;
+  background: #f1f3f4;
+  fill: #5f6368;
+  color: #5f6368;
+}
+.search_box .search_form .inpSearch {
+  padding: 0 16px;
+  border-color: transparent;
+  background: transparent;
+  border-style: solid;
+  border-width: 0 1px;
+  outline: none;
+}
+.search_box .search_form .inpSearch::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+.search_box .search_form .inpSearch::-moz-placeholder {
+  opacity: 0.5;
+}
+.search_box .search_form .inpSearch:-ms-input-placeholder {
+  opacity: 0.5;
+}
+.search_box .search_form .inpSearch::-ms-input-placeholder {
+  opacity: 0.5;
+}
+.search_box .search_form .inpSearch::placeholder {
+  opacity: 0.5;
+}
+.search_box .search_form .btnDel {
+  display: none;
+}
+.search_box .search_form .show {
+  display: block;
+}
+.search_box .search_form .changeOfStyle {
+  background: white;
+}
+
+.lk_box .lk-item div {
+  margin: 0 0;
+  border-radius: 50%;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+.lk_box .lk-item div .bi {
+  font-size: 1.3rem;
+  fill: #5f6368;
+  color: #5f6368;
+}
+.lk_box .lk-item :hover {
+  background: #d9dcdf;
+}
+
+.main .sub_main .menu_left {
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12);
+  inline-size: var(--mdc-width, var(--mdc-drawer-container-width, 275px));
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: inline-size 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s, visibility 0s cubic-bezier(0.4, 0, 0.2, 1) 0.25s;
+  transition: inline-size 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s, visibility 0s cubic-bezier(0.4, 0, 0.2, 1) 0.25s;
+  inline-size: 1;
+}
+.main .sub_main .active {
+  inline-size: 0;
+}
+.main .sub_main .box_left {
+  min-inline-size: var(--mdc-width, var(--mdc-drawer-container-width, 275px));
+  position: relative;
+  -webkit-transition: min-inline-size 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: min-inline-size 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.main .sub_main .menu {
+  height: calc(100vh - 24px);
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  position: inherit;
+}
+.main .sub_main .scrollbox {
+  overflow: auto;
+  visibility: hidden;
+}
+.main .sub_main .scrollbox-content,
+.main .sub_main .scrollbox:hover,
+.main .sub_main .scrollbox:focus {
+  visibility: visible;
+}
+.main .sub_main .scrollbox::-webkit-scrollbar {
+  background: transparent;
+  height: 16px;
+}
+.main .sub_main .scrollbox::-webkit-scrollbar-button {
+  background: transparent;
+}
+.main .sub_main .scrollbox::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.main .sub_main .scrollbox::-webkit-scrollbar-thumb {
+  background: rgba(128, 134, 139, 0.2);
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main .sub_main .menu_left .lineMargin {
+  border-bottom: 1px solid #dadce0;
+  width: 14.5rem;
+  margin: 0.75rem 0;
+  margin-left: 1rem;
+}
+.main .sub_main .menu_left .basic_menu {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+.main .sub_main .menu_left .basic_menu a {
+  text-decoration: none;
+  color: #3c4043;
+  width: 15rem;
+  height: 42px;
+  cursor: pointer;
+  padding-left: 1.5rem;
+}
+.main .sub_main .menu_left .basic_menu a .bi {
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  color: #5f6368;
+}
+.main .sub_main .menu_left .basic_menu a span {
+  font-family: "Google", Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.main .sub_main .menu_left .basic_menu a:hover .bi {
+  color: #1967d2;
+}
+.main .sub_main .menu_left .basic_menu a:hover span {
+  color: #1967d2;
+}
+.main .sub_main .menu_left .basic_menu a:first-child {
+  color: #1967d2;
+  background: #e3edfd;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-bottom-left-radius: 5px;
+}
+.main .sub_main .menu_left .basic_menu a:first-child .bi {
+  color: #1967d2;
+}
+.main .sub_main .menu_left .Covid_menu {
+  list-style-type: none;
+  padding: 0;
+}
+.main .sub_main .menu_left .Covid_menu a {
+  text-decoration: none;
+  color: #3c4043;
+  width: 15rem;
+  height: 42px;
+  cursor: pointer;
+  padding-left: 1.5rem;
+}
+.main .sub_main .menu_left .Covid_menu a .bi {
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  color: #5f6368;
+}
+.main .sub_main .menu_left .Covid_menu a span {
+  font-family: "Google", Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.main .sub_main .menu_left .Covid_menu a:hover .bi {
+  color: #1967d2;
+}
+.main .sub_main .menu_left .Covid_menu a:hover span {
+  color: #1967d2;
+}
+.main .sub_main .menu_left .secondary_menu {
+  list-style-type: none;
+  padding: 0;
+}
+.main .sub_main .menu_left .secondary_menu a {
+  text-decoration: none;
+  color: #3c4043;
+  width: 15rem;
+  height: 42px;
+  cursor: pointer;
+  padding-left: 1.5rem;
+}
+.main .sub_main .menu_left .secondary_menu a .bi {
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  color: #5f6368;
+}
+.main .sub_main .menu_left .secondary_menu a .iconSvg {
+  height: 24px;
+  width: 24px;
+  margin-right: 1rem;
+  fill: #5f6368;
+}
+.main .sub_main .menu_left .secondary_menu a span {
+  font-family: "Google", Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.main .sub_main .menu_left .secondary_menu a:hover .bi {
+  color: #1967d2;
+}
+.main .sub_main .menu_left .secondary_menu a:hover .iconSvg {
+  fill: #1967d2;
+}
+.main .sub_main .menu_left .secondary_menu a:hover span {
+  color: #1967d2;
+}
+.main .sub_main .menu_left .setings_menu {
+  list-style-type: none;
+  padding: 0;
+}
+.main .sub_main .menu_left .setings_menu a {
+  text-decoration: none;
+  color: #3c4043;
+  width: 15rem;
+  height: 42px;
+  cursor: pointer;
+  padding-left: 1.5rem;
+}
+.main .sub_main .menu_left .setings_menu a span {
+  font-family: "Google", Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.main .sub_main .menu_left .setings_menu a .bi {
+  margin: 0 0.5rem;
+  color: #5f6368;
+  width: 16px;
+  height: 16px;
+}
+.main .sub_main .menu_left .setings_menu a:first-child .small {
+  font-family: "Google", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: black;
+}
+.main .sub_main .menu_left .setings_menu a:hover .bi {
+  color: #1967d2;
+}
+.main .sub_main .menu_left .setings_menu a:hover span {
+  color: #1967d2;
+}
+
+.main .sub_main .conent_block {
+  position: absolute;
+  max-width: 1176px;
+  margin: auto;
+  top: 80px;
+  left: 5.5%;
+  right: 0;
+  bottom: 0;
+}
+.main .sub_main .conent_block .news_block {
+  max-width: 730.66px;
+  height: 150px;
+}
+.main .sub_main .conent_block .news_block .heading {
+  margin-top: 2.5rem;
+  margin-bottom: 20px;
+}
+.main .sub_main .conent_block .news_block .heading h2 {
+  font-family: "Google", Arial, sans-serif;
+  font-size: 1.3rem;
+  margin: 0;
+}
+.main .sub_main .conent_block .news_block .heading a {
+  text-decoration: none;
+  color: #1a89ee;
+  font-family: "GoogleLight", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.main .sub_main .conent_block .news_block .Corona {
+  background: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+}
+.main .sub_main .conent_block .news_block .Corona:hover {
+  -webkit-box-shadow: 0 0 10px #bebebe;
+  box-shadow: 0 0 10px #bebebe;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+}
+
+.main .sub_main .conent_block .news_block .news_elementBlock {
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  position: relative;
+  overflow-anchor: none;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+.main .sub_main .conent_block .news_block .news_elementBlock a {
+  text-decoration: none;
+}
+.main .sub_main .conent_block .news_block .news_elementBlock a figure {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.main .sub_main .conent_block .news_block .news_elementBlock a figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main .sub_main .conent_block .news_block .news_elementBlock .News_article {
+  position: relative;
+  color: #202124;
+  vertical-align: top;
+  padding: 16px 132px 0 16px;
+}
+.main .sub_main .conent_block .news_block .news_elementBlock .News_article .article_link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  cursor: pointer;
+}
+.main .sub_main .conent_block .news_block .news_elementBlock .News_article h3 {
+  margin-bottom: 0;
+  font-size: 1.125rem;
+}
+
+.news_elementBlock .News_article .sub_news h3 .article_link_items {
+  display: block;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 500;
+  color: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+.news_elementBlock .News_article:hover h3 .article_link_items {
+  text-decoration: underline;
+}
+.news_elementBlock .News_article:hover .info_block .information_tips .btn {
+  opacity: 1;
+}
+
+.news_elementBlock .News_article .info_time .links {
+  font-family: "GoogleLight", Arial, sans-serif;
+  font-size: 0.75rem;
+  color: inherit;
+  display: inline-block;
+  margin-right: 5px;
+  opacity: 0.7;
+}
+.news_elementBlock .News_article .info_time time {
+  font-family: "GoogleLight", Arial, sans-serif;
+  font-size: 0.75rem;
+  color: inherit;
+  display: inline-block;
+  margin-right: 5px;
+  opacity: 0.7;
+}
+
+.news_elementBlock .News_article .info_block menu {
+  margin: 0;
+  padding: 0;
+}
+.news_elementBlock .News_article .info_block .information_tips {
+  display: block;
+  position: relative;
+  z-index: 6;
+  white-space: nowrap;
+  text-align: right;
+}
+.news_elementBlock .News_article .info_block .information_tips .btn {
+  display: inline-block;
+  background: #ffffff;
+  font-size: 2px;
+  margin-right: 0.25rem;
+  padding: 2px 4px;
+  border-radius: 1rem;
+  border: none;
+  transition: opacity 0.15s ease-in-out;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+  opacity: 0;
+}
+.news_elementBlock .News_article .info_block .information_tips .btn .btn_icon {
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.news_elementBlock .News_article .info_block .information_tips .btn .bi {
+  fill: #5f6368;
+  color: #5f6368;
+  font-size: 10px;
+}
+.news_elementBlock .News_article .info_block .information_tips .btn:hover {
+  -webkit-box-shadow: 0 0 10px #bebebe;
+  box-shadow: 0 0 10px #bebebe;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+}
+
+.news_elementBlock .sub_news {
+  position: relative;
+  color: #202124;
+  vertical-align: top;
+  padding: 16px 132px 0 35px;
+}
+.news_elementBlock .sub_news .article_link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  cursor: pointer;
+}
+.news_elementBlock .sub_news h4 {
+  margin-bottom: 0;
+  font-size: 0.875rem;
+}
+.news_elementBlock .sub_news h4 .article_link_items {
+  display: block;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 500;
+  color: inherit;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+.news_elementBlock .sub_news:hover h4 .article_link_items {
+  text-decoration: underline;
+}
+.news_elementBlock .sub_news:hover .info_block .information_tips .btn {
+  opacity: 1;
+}
+.news_elementBlock .sub_news .info_time .links {
+  font-family: "GoogleLight", Arial, sans-serif;
+  font-size: 0.75rem;
+  color: inherit;
+  display: inline-block;
+  margin-right: 5px;
+  opacity: 0.7;
+}
+.news_elementBlock .sub_news .info_time time {
+  font-family: "GoogleLight", Arial, sans-serif;
+  font-size: 0.75rem;
+  color: inherit;
+  display: inline-block;
+  margin-right: 5px;
+  opacity: 0.7;
+}
+.news_elementBlock .sub_news .info_block menu {
+  margin: 0;
+  padding: 0;
+}
+.news_elementBlock .sub_news .info_block .information_tips {
+  display: block;
+  position: relative;
+  z-index: 6;
+  white-space: nowrap;
+  text-align: right;
+}
+.news_elementBlock .sub_news .info_block .information_tips .btn {
+  display: inline-block;
+  background: #ffffff;
+  font-size: 2px;
+  margin-right: 0.25rem;
+  padding: 2px 4px;
+  border-radius: 1rem;
+  border: none;
+  transition: opacity 0.15s ease-in-out;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+  opacity: 0;
+}
+.news_elementBlock .sub_news .info_block .information_tips .btn .btn_icon {
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.news_elementBlock .sub_news .info_block .information_tips .btn .bi {
+  fill: #5f6368;
+  color: #5f6368;
+  font-size: 10px;
+}
+.news_elementBlock .sub_news .info_block .information_tips .btn:hover {
+  -webkit-box-shadow: 0 0 10px #bebebe;
+  box-shadow: 0 0 10px #bebebe;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+}
+.news_elementBlock .sub_news_btn::before {
+  position: absolute;
+  top: 30px;
+  right: auto;
+  bottom: auto;
+  left: 22px;
+  z-index: 1;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background: #1a73e8;
+}
+.news_elementBlock .accordion-items {
+  display: none;
+}
+
+.tooltip .tooltip-inner {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+.tooltip .tooltip-arrow::before {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.6);
+}
+
+.news_elementBlock .showAndHight {
+  padding: 0 30px;
+}
+.news_elementBlock .showAndHight .linkShow a span {
+  font-family: "Google", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.news_elementBlock .showAndHight .linkShow a span:hover {
+  text-decoration: underline;
+}
+.news_elementBlock .showAndHight .toggleButton .show {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.news_elementBlock .showAndHight .toggleButton .show :hover {
+  color: #1967d2;
+}
+.news_elementBlock .showAndHight .toggleButton .transform {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.weather_aside {
+  position: absolute;
+  max-width: 350px;
+  top: 84px;
+  left: 65%;
+  right: 0;
+  bottom: 0;
+}
+
+.weather_title .weather_sub_title {
+  color: #5f6368;
+  padding: 12.8px 0;
+  margin: 0 16px;
+  border-bottom: 1px solid #dadce0;
+}
+.weather_title .weather_sub_title h4 {
+  font-family: "Google", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: inherit;
+  margin-bottom: 0;
+}
+
+.weather_block_title {
+  -webkit-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-align: center;
+  box-align: center;
+  height: 108px;
+  padding: 0.5rem 0.75rem 1rem 1rem;
+}
+.weather_block_title .Weather_condition {
+  font-family: "Google", Arial, sans-serif;
+  font-size: 0.875rem;
+  color: #3c4043;
+  font-weight: 500;
+  line-height: 1.42;
+}
+.weather_block_title .temperature {
+  font-family: "GoogleLight", Arial, sans-serif;
+  font-size: 1.75rem;
+  color: #3c4043;
+  font-weight: 400;
+  line-height: 1.42;
+}
+.weather_block_title .celsius {
+  font-family: "Google", Arial, sans-serif;
+  font-size: 0.875rem;
+  color: #3c4043;
+  font-weight: 500;
+  line-height: 1.42;
+  margin-left: 2px;
+}
+.weather_block_title .weather_condition_img {
+  width: 84px;
+  height: 84px;
+}
+.weather_block_title .weather_condition_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.weatherFive_block div {
+  overflow: hidden;
+  text-align: center;
+}
+.weatherFive_block div span {
+  font-family: "Google", Arial, sans-serif;
+  font-size: 0.875rem;
+  color: #3c4043;
+  font-weight: 500;
+  line-height: 1.42;
+  display: block;
+  height: 1rem;
+}
+.weatherFive_block div .weather_icon {
+  width: 52px;
+  max-width: 100%;
+  height: 52px;
+  margin: 0 auto;
+}
+.weatherFive_block div .weather_icon img {
+  width: 100%;
+  height: 100%;
+}

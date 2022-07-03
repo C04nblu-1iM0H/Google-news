@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- браузеры -->
+    <link rel="shortcut icon" href="icon/Web/icons8-google-16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon/Web/icons8-google-32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon/Web/icons8-google-96.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon/Web/icons8-google-120.png" type="image/x-icon">
+    <!-- ios safari -->
+    <link rel="shortcut icon" href="icon/iOS Safari Web Clip/icons8-google-57.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon/iOS Safari Web Clip/icons8-google-60.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon/iOS Safari Web Clip/icons8-google-72.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon/iOS Safari Web Clip/icons8-google-76.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon/iOS Safari Web Clip/icons8-google-114.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon/iOS Safari Web Clip/icons8-google-120.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon/iOS Safari Web Clip/icons8-google-144.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon/iOS Safari Web Clip/icons8-google-152.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>News</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-xxl navbar-light bg-light box_navbar">
+        <div class="container-fluid d-flex justify-content-between">
+            <div class="LogoBurgerMenu d-flex align-items-center">
+                <div class="burger"  arial-label="Главное меню" role="button">
+                    <svg class="burger_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M4,5 L20,5 C20.5522847,5 21,5.44771525 21,6 C21,
+                        6.55228475 20.5522847,7 20,7 L4,7 C3.44771525,7 3,6.55228475 3,6 C3,5.44771525 
+                        3.44771525,5 4,5 Z M4,17 L20,17 C20.5522847,17 21,17.4477153 21,18 C21,18.5522847 
+                        20.5522847,19 20,19 L4,19 C3.44771525,19 3,18.5522847 3,18 C3,17.4477153 
+                        3.44771525,17 4,17 Z M4,11 L20,11 C20.5522847,11 21,11.4477153 21,12 C21,12.5522847 
+                        20.5522847,13 20,13 L4,13 C3.44771525,13 3,12.5522847 3,12 C3,11.4477153 3.44771525,
+                        11 4,11 Z"/>
+                    </svg>
+                </div>
+                <div class="logo_Block">
+                    <a class="logo_Link">
+                        <span></span>
+                        <span>Новости</span>
+                    </a>
+                </div>
+            </div>
+            <div class="search_box col-md-4">
+                <div class="search_element">
+                    <form class="search_form d-flex justify-content-between" role="search">
+                        <button class="btnSearch" aria-label="Поиск" role="Button">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50">
+                                <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 
+                                37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 
+                                31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 
+                                C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 
+                                6 20 C 6 11.703125 12.703125 5 21 5 Z">
+                                </path>
+                            </svg>
+                        </button>
+                        <input class="inpSearch container-fluid" placeholder="Поиск тем, мест и источников" type="text">
+                        <div class="btnEnd d-flex">
+                            <button class="btnDel" aria-label="Удалить поисковый запрос" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 32 32">
+                                    <path d="M17.414,16l4.95,4.95l-1.414,1.414L16,17.414l-4.95,4.95L9.636,20.95l4.95-4.95l-4.95-4.95
+                                    l1.414-1.414l4.95,4.95l4.95-4.95l1.414,1.414L17.414,16z"/>
+                                </svg>
+                            </button>
+                            <button class="btnSearchAdvanced" title="расширенный поиск" type="button">
+                                <i class="bi bi-chevron-compact-down"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="lk_box ">
+                <div class="lk-item d-flex justify-content-evenly">
+                    <div><i class="bi bi-grid-3x3-gap-fill "></i></div>
+                    <div><i class="bi bi-person-circle"></i></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="container-fluid main">
+        <section class="row d-flex sub_main">
+            <section class="col-xl-2 p-0 menu_left ">
+                <section class="menu_leftBox">
+                <section class="box_left scrollbox d-flex flex-column " tabindex="0">
+                    <section class="menu scrollbox-content">
+                        <ul class="basic_menu d-flex flex-column">
+                            <a class="d-flex flex-row align-items-center " href="#">
+                                <i class="bi bi-globe"></i>
+                                <span>Главное новости</span>
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <i class="bi bi-diamond"></i>
+                                <span>Для вас</span>
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <i class="bi bi-star"></i>
+                                <span>Вы подписаны</span>
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <i class="bi bi-search"></i>
+                                <span>Сохранённые запросы</span>
+                            </a>
+                        </ul>
+                        <hr class="lineMargin">
+                        <ul class="Covid_menu">
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <i class="bi bi-shield-plus"></i>
+                                <span>COVID-19</span>
+                            </a>
+                        </ul>
+                        <hr class="lineMargin">
+                        <ul class="secondary_menu">
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <i class="bi bi-flag-fill"></i>
+                                <span>Россия</span>
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <svg class="iconSvg" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4
+                                        12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4
+                                        12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0
+                                        2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 
+                                        4.873z"/>
+                                    </svg>
+                                <span>В мире</span>
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <svg class="iconSvg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 
+                                    8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 
+                                    3 1.343 3 3-1.343 3-3 3z"/>
+                                </svg>
+                                <span>Местные новости</span>
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <svg class="iconSvg" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path d="M24 24h-22v-24h14v8h8v16zm-16-5h-3v4h3v-4zm5 0h-3v4h3v-4zm8 0h-3v4h3v-4zm-15-5h-2v2h2v-2zm8 
+                                    0h-2v2h2v-2zm-4 0h-2v2h2v-2zm9 0h-2v2h2v-2zm3 0h-2v2h2v-2zm-16-4h-2v2h2v-2zm8 0h-2v2h2v-2zm-4 
+                                    0h-2v2h2v-2zm9 0h-2v2h2v-2zm3 0h-2v2h2v-2zm-16-4h-2v2h2v-2zm8 0h-2v2h2v-2zm-4 
+                                    0h-2v2h2v-2zm-4-4h-2v2h2v-2zm8 0h-2v2h2v-2zm-4 0h-2v2h2v-2z"/>
+                                </svg>
+                                <span>Бизнес</span>
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <svg class="iconSvg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 533.333 533.333">
+                                    <g>
+                                        <path d="M498.067,419.001L333.333,144.509V33.333H350c9.166,0,16.667-7.5,16.667-16.667S359.166,0,350,0H183.333
+                                        c-9.167,0-16.667,7.5-16.667,16.667s7.5,16.667,16.667,16.667H200v111.176L35.266,419.001
+                                        c-37.73,62.883-8.6,114.332,64.733,114.332h333.333C506.667,533.333,535.797,481.884,498.067,419.001z M125.54,333.333
+                                        l107.793-179.655V33.333H300v120.345l107.794,179.655H125.54z"/>
+                                    </g>
+                                    </svg>
+                                <span>Наука и техника</span>
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <i class="bi bi-file-play-fill"></i>
+                                <span>Развлечения</span>
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <i class="bi bi-bicycle"></i>
+                                <span>Спорт</span>
+                            </a>
+                        </ul>
+                        <hr class="lineMargin">
+                        <ul class="setings_menu">
+                            <a class="d-flex flex-column " href="#">
+                                <span>Язык и регион</span>
+                                <small class="small">Русский (Россия)</small>    
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <span>Настройки</span>   
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <span>Скачать приложение для Android</span>
+                                <i class="bi bi-arrow-up-right-square"></i>
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <span>Скачать приложение для IOS</span> 
+                                <i class="bi bi-arrow-up-right-square"></i>  
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <span>Отправить отзыв</span>   
+                            </a>
+                            <a class="d-flex flex-row align-items-center" href="#">
+                                <span>Справка</span>
+                                <i class="bi bi-arrow-up-right-square"></i>
+                            </a>
+                        </ul>
+                    </section>
+                </section>
+                </section>    
+            </section>
+            <section class="col-xl-10 p-0 conent_block">
+                <section class="d-flex justify-content-between">
+                    <main class="news_block col-xl-8 d-flex flex-column">
+                        <div class="heading d-flex flex-row justify-content-between align-items-center">
+                            <h2>Заголовки</h2>
+                            <a href="#">Заголовки: другие материалы</a>
+                        </div>
+                        <div class="Corona d-flex flex-row justify-content-between">
+                            <div>
+                                <span>COVID-19:</span>
+                                <span>Узнайте последние новости о коронавирусе.</span>
+                            </div>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                        <div class="news_elementBlock">
+                            <div class="news_elementBlock_2">
+                                <div class="news_elementBlock_3">
+                                    <a href="#">
+                                        <figure>
+                                            <img src="img/onestate.jpg" width="100px" height="100px">
+                                        </figure>
+                                    </a>
+                                    <article class="News_article col-xl-12">
+                                        <a class="article_link" href="#"></a>
+                                        <h3>
+                                            <span class="article_link_items" href="#">Зеленский о встрече с Путиным: Чем дольше РФ затягивает, тем хуже для нее</span>
+                                        </h3>
+                                        <div class="d-flex flex-row align-items-center info_block">
+                                            <div class="info_time">
+                                                <a class="links" href="#">Украинская правда</a>
+                                                <time datetime="2022-04-04T13:20:59Z">3 часа назад </time>
+                                            </div>
+                                            <menu class="information_tips">
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Сохранить">
+                                                    <i class="bi bi-bookmark"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Поделится">
+                                                    <i class="bi bi-share-fill"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ещё">
+                                                    <div class="btn_icon"></div>
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+                                            </menu>
+                                        </div>
+                                    </article>
+                                    <article class="sub_news sub_news_btn col-xl-12">
+                                        <a class="article_link" href="#"></a>
+                                        <h4>
+                                            <span class="article_link_items" href="#">Войска ЛНР продолжают наступление в Донбассе — Минобороны России - ИА REGNUM</span>
+                                        </h4>
+                                        <div class="d-flex flex-row align-items-center info_block">
+                                            <div class="info_time">
+                                                <a class="links" href="#">ИА REGNUM</a>
+                                                <time datetime="2022-04-04T13:20:59Z">3 часa назад</time>
+                                            </div>
+                                            <menu class="information_tips">
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Сохранить">
+                                                    <i class="bi bi-bookmark"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Поделится">
+                                                    <i class="bi bi-share-fill"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ещё">
+                                                    <div class="btn_icon"></div>
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+                                            </menu>
+                                        </div>
+                                    </article>
+                                    <div id="div1" class="accordion-items">
+                                        <article class="sub_news sub_news_btn  col-xl-12" >
+                                        <a class="article_link" href="#"></a>
+                                        <h4>
+                                            <span class="article_link_items" href="#">Войска ЛНР продолжают наступление в Донбассе — Минобороны России - ИА REGNUM</span>
+                                        </h4>
+                                        <div class="d-flex flex-row align-items-center info_block">
+                                            <div class="info_time">
+                                                <a class="links" href="#">ИА REGNUM</a>
+                                                <time datetime="2022-04-04T13:20:59Z">3 часa назад</time>
+                                            </div>
+                                            <menu class="information_tips">
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Сохранить">
+                                                    <i class="bi bi-bookmark"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Поделится">
+                                                    <i class="bi bi-share-fill"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ещё">
+                                                    <div class="btn_icon"></div>
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+                                            </menu>
+                                        </div>
+                                        </article>
+                                        <article class="sub_news sub_news_btn  col-xl-12" >
+                                        <a class="article_link" href="#"></a>
+                                        <h4>
+                                            <span class="article_link_items" href="#">Войска ЛНР продолжают наступление в Донбассе — Минобороны России - ИА REGNUM</span>
+                                        </h4>
+                                        <div class="d-flex flex-row align-items-center info_block">
+                                            <div class="info_time">
+                                                <a class="links" href="#">ИА REGNUM</a>
+                                                <time datetime="2022-04-04T13:20:59Z">3 часa назад</time>
+                                            </div>
+                                            <menu class="information_tips">
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Сохранить">
+                                                    <i class="bi bi-bookmark"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Поделится">
+                                                    <i class="bi bi-share-fill"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ещё">
+                                                    <div class="btn_icon"></div>
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+                                            </menu>
+                                        </div>
+                                        </article>
+                                    </div>
+                                    <div class="showAndHight d-flex justify-content-between mt-2">
+                                        <div class="linkShow">
+                                            <i class="bi bi-receipt-cutoff"></i>
+                                            <a href="#"><span>Просмотр</span></a>
+                                        </div>
+                                        <div class="toggleButton">
+                                            <div class="show" target="1">
+                                                <i class="bi bi-chevron-compact-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news_elementBlock">
+                            <div class="news_elementBlock_2">
+                                <div class="news_elementBlock_3">
+                                    <a href="#">
+                                        <figure>
+                                            <img src="img/onestate.jpg" width="100px" height="100px">
+                                        </figure>
+                                    </a>
+                                    <article class="News_article col-xl-12">
+                                        <a class="article_link" href="#"></a>
+                                        <h3>
+                                            <span class="article_link_items" href="#">Зеленский о встрече с Путиным: Чем дольше РФ затягивает, тем хуже для нее</span>
+                                        </h3>
+                                        <div class="d-flex flex-row align-items-center info_block">
+                                            <div class="info_time">
+                                                <a class="links" href="#">Украинская правда</a>
+                                                <time datetime="2022-04-04T13:20:59Z">3 часа назад </time>
+                                            </div>
+                                            <menu class="information_tips">
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Сохранить">
+                                                    <i class="bi bi-bookmark"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Поделится">
+                                                    <i class="bi bi-share-fill"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ещё">
+                                                    <div class="btn_icon"></div>
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+                                            </menu>
+                                        </div>
+                                    </article>
+                                    <article class="sub_news sub_news_btn col-xl-12">
+                                        <a class="article_link" href="#"></a>
+                                        <h4>
+                                            <span class="article_link_items" href="#">Войска ЛНР продолжают наступление в Донбассе — Минобороны России - ИА REGNUM</span>
+                                        </h4>
+                                        <div class="d-flex flex-row align-items-center info_block">
+                                            <div class="info_time">
+                                                <a class="links" href="#">ИА REGNUM</a>
+                                                <time datetime="2022-04-04T13:20:59Z">3 часa назад</time>
+                                            </div>
+                                            <menu class="information_tips">
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Сохранить">
+                                                    <i class="bi bi-bookmark"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Поделится">
+                                                    <i class="bi bi-share-fill"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ещё">
+                                                    <div class="btn_icon"></div>
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+                                            </menu>
+                                        </div>
+                                    </article>
+                                    <div id="div2" class="accordion-items">
+                                        <article class="sub_news sub_news_btn  col-xl-12" >
+                                        <a class="article_link" href="#"></a>
+                                        <h4>
+                                            <span class="article_link_items" href="#">Войска ЛНР продолжают наступление в Донбассе — Минобороны России - ИА REGNUM</span>
+                                        </h4>
+                                        <div class="d-flex flex-row align-items-center info_block">
+                                            <div class="info_time">
+                                                <a class="links" href="#">ИА REGNUM</a>
+                                                <time datetime="2022-04-04T13:20:59Z">3 часa назад</time>
+                                            </div>
+                                            <menu class="information_tips">
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Сохранить">
+                                                    <i class="bi bi-bookmark"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Поделится">
+                                                    <i class="bi bi-share-fill"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ещё">
+                                                    <div class="btn_icon"></div>
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+                                            </menu>
+                                        </div>
+                                        </article>
+                                        <article class="sub_news sub_news_btn  col-xl-12" >
+                                        <a class="article_link" href="#"></a>
+                                        <h4>
+                                            <span class="article_link_items" href="#">Войска ЛНР продолжают наступление в Донбассе — Минобороны России - ИА REGNUM</span>
+                                        </h4>
+                                        <div class="d-flex flex-row align-items-center info_block">
+                                            <div class="info_time">
+                                                <a class="links" href="#">ИА REGNUM</a>
+                                                <time datetime="2022-04-04T13:20:59Z">3 часa назад</time>
+                                            </div>
+                                            <menu class="information_tips">
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Сохранить">
+                                                    <i class="bi bi-bookmark"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Поделится">
+                                                    <i class="bi bi-share-fill"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ещё">
+                                                    <div class="btn_icon"></div>
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+                                            </menu>
+                                        </div>
+                                        </article>
+                                    </div>
+                                    <div class="showAndHight d-flex justify-content-between">
+                                        <div class="linkShow">
+                                            <i class="bi bi-receipt-cutoff"></i>
+                                            <a href="#"><span>Просмотр</span></a>
+                                        </div>
+                                        <div class="toggleButton">
+                                            <div class="show" target="2">
+                                                <i class="bi bi-chevron-compact-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    <aside class="weather_aside col-xl-4">
+                        <div class="border border-1 rounded-3">
+                            <div class="weather_title">
+                                <div class="weather_sub_title d-flex flex-row justify-content-between align-items-center">
+                                    <h4 class="city-name">Погода в вашем регионе</h4>
+                                    <i class="bi bi-geo-fill"></i>
+                                </div>
+                            </div>
+                            <div class="weather_block">
+                                <div class="weather_block_title d-flex flex-row justify-content-between align-items-center">
+                                    <div class="weather_block_temperature d-flex flex-column">
+                                        <div class="Weather_condition">Переменная облачность</div>
+                                        <span class="temperature">18<span class="celsius">с</span></span>
+                                    </div>
+                                    <div class="Weather_condition_block">
+                                        <div class="weather_condition_img">
+                                            <img src="img/google_wather.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="weatherFive mx-2 mb-3">
+                                    <div class="weatherFive_block d-flex flex-row align-items-center">
+                                        <div class="flex-shrink-1 flex-grow-1">
+                                            <span>СБ</span>
+                                            <div class="weather_icon mb-1">
+                                                <img src="img/google_wather.png" >
+                                            </div>
+                                            <div>
+                                                <span>23&#176</span>
+                                                <span>7&#176</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-1 flex-grow-1">
+                                            <span>ПН</span>
+                                            <div class="weather_icon mb-1">
+                                                <img src="img/google_wather.png" >
+                                            </div>
+                                            <div>
+                                                <span>24&#176</span>
+                                                <span>13&#176</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-1 flex-grow-1">
+                                            <span>ВТ</span>
+                                            <div class="weather_icon mb-1">
+                                                <img src="img/google_wather_Rain.png" >
+                                            </div>
+                                            <div>
+                                                <span>13&#176</span>
+                                                <span>12&#176</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-1 flex-grow-1">
+                                            <span>СР</span>
+                                            <div class="weather_icon mb-1">
+                                                <img src="img/google_wather_Rain.png" >
+                                            </div>
+                                            <div>
+                                                <span>9&#176</span>
+                                                <span>6&#176</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-1 flex-grow-1">
+                                            <span>ЧТ</span>
+                                            <div class="weather_icon mb-1">
+                                                <img src="img/google_wather_Rain.png" >
+                                            </div>
+                                            <div>
+                                                <span>9&#176</span>
+                                                <span>5&#176</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weather_footer">
+                                <div></div>
+                            </div>
+                        </div>
+                    </aside>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/Jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
